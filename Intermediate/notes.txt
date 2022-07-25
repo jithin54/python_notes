@@ -1,1 +1,80 @@
+List
+===========
+mylist = []
+mylist = list()
+- ordered, mutable, allows duplicates
+- different datatypes
+- index accessible
 
+- iteratable using for in loop
+	for val in mylist:
+	
+- to check if an item inside a list
+	if "banana" in mylist:
+
+- length method
+	len(mylist)
+	
+- append method
+	mylist.append("blue)
+	
+- insert method
+	mylist.insert(2, "red")
+	
+- remove an item
+	mylist.pop()
+	this also returns the removed item.
+	
+- remove a secific method
+	mylist.remove("black")
+	
+- remove all/ clear method
+	mylist.clear()
+	
+- reverse method
+	mylist.reverse()
+	
+- sort method
+	mylist.sort()
+	sorts the original list it self
+	
+	newlist = sorted(mylist)
+	original list does not change
+	
+- create a new list with same value
+	mylist = [1]*10
+	
+- concatenate a list
+	newlist = mylist + [5]*6
+	
+- slicing a list
+	newlist = mylist[2:8]
+	slice the elements from index 2 to 7
+	
+	if you dont specify a start/stop index, it goes all the way from beginning/end
+	
+	optional step index
+	newlist = [::2]
+	gets every second item
+	
+	reversing a list mylist[::-1]
+	
+- copying a list
+	newlist = mylist
+	it does not create a new list object
+	any change in newlist will make similar change in mylist
+	
+	best way
+	newlist = mylist.copy()
+	
+	another way
+	 newlist = mylist[:]
+	
+- list comprehension
+	newlist = [i for i in mylist]
+	copied the list here
+	
+	squaring
+	newlist = [i*i for i in mylist]
+	
+	syntax: [expression + for in loop]
