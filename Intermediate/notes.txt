@@ -303,3 +303,94 @@ Sets
 - frozen set
 	immutable set
 	setA = frozenset([1,2,3,4])
+
+String
+=============
+- ordered, immutable datatype
+
+- empty string
+	mystring = ''
+	
+- initialisation
+	mystring = 'hello world'
+	
+	for multiline string use """
+	
+	\ for writing string in two lines, but still its a single line string
+	
+- index accessible like list, tuple
+	strings are immutable, so it can not be changed
+	
+- creating substring
+	use slicing technique
+	all rules for list slicing is applicable here
+	
+	for example
+	reverse = mystring[::-1]
+	
+- concatenate string
+	mystring = str1 + str2
+	
+- iterate over string
+	for i in mystring
+	
+- check if a char/substring is present
+	if "a" (or "lem") in mystring:
+	
+- strip method
+	removes the additonal white space
+	mystring.strip()
+	
+	since string is immutable, we need to re assign
+	mystring = mystring.strip()
+	
+- upper case method
+	mystring = mystring.upper() / again reassigning is important
+	
+- lower case method
+	mystring = mystring.lower()
+	
+- starts with a char/subset
+	mystring.startswith("h")
+
+- ends with a char/substring
+	mystring.endswith("le")
+	
+- find a char/subset
+	returns the first index where its found, otherwise return -1
+	mystring.find("o")
+	
+- count number of char/subset
+	mystring.count("he")
+	
+- replace a char/substring
+	mystring = mystring.replace("world", "earth")
+	re assign is important
+	if it does not find char/subset, does not do anything
+	
+- convert to a list
+	mylist = mystring.split() 
+	split by comma space etc.. by default its space
+	
+- convert from list to string / join method
+	mystring = ",".join(mylist)
+	joins all the elements of the list and add commas in bw them
+	
+	this is very usefull
+	mystring = "".join(mylist) / joins all the elements
+	
+	do not use for loop and concatenate every element
+	that is inefficient
+	
+- string place holders (this is old)
+	%s for char , %d for int, %f for float
+	mystring = "the value is %d" %var_name
+	
+	.format method
+	mystring = "the value is {} and {}".format{var_name, var_name1}
+	
+	f-string
+	mystring = f"the value is {var_name} and {var_name1}
+	
+	f-string is better and faster
+	we can also do runtime calculation inside the {}
