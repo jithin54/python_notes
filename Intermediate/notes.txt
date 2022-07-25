@@ -209,5 +209,97 @@ Dict
 - tuple as key
 	mydict = P{("first","last") : "John Smith", "age":19}
 	list is mutable, so can not be used as a key
-	
 
+Sets
+==============
+- unordered, mutable
+- unlike list or tuple, it does not allow duplicates
+
+-empty set
+	myset = set()
+	
+	important
+	myset = {} this will create an emty dict
+	
+- initialisation
+	myset = {1,2,3}
+	
+	from a list
+	myset = set([1,2,3])
+
+	from string
+	myset = set("Hello")
+	it will create {'o', 'H', 'l', 'e'}
+	
+- add method
+	myset.add(2)
+	
+- remove method
+	myset.remove(2)
+	possible key error
+	
+	or
+	myset.discard()
+	this will not do anything if key is not present
+
+- empty the set
+	myset.clear()
+	
+- pop method
+	myset.pop()
+	pop out an arbitary key
+	it returns the popped out key
+	
+- loop through set
+	for i in myset:
+	
+- element is present in a set
+	if 1 in myset:
+	
+- union of sets
+	newset = myset.union(anotherset)
+	
+	to change the same set
+	myset.update(anotherset)
+	
+- intersection of sets
+	newset = myset.intersection(anotherset)
+	
+	to change the same set
+	newset.intersection_update(otherset)
+	
+- difference in sets
+	newset = myset.difference(otherset)
+	it takes all the numbers in myset that is not available in otherset
+	
+	to change the same set
+	myset.difference_update(otherset)
+	
+- symmetric_difference
+	another difference method is symmetric_difference
+	newset = myset.symmetric_difference(otherset)
+	
+	to chanfe the same set
+	newset.symmetric_difference_update(otherset)
+	
+- subset check method
+	setA.subset(setB): returns t/f
+	
+- superset check method
+	setA.superset(setB)
+	
+- disjoint check method / no intersection
+	setA.disjoint(setB)
+
+- copying sets
+	 setA = setA
+	 does not perform hard copy. its the same object
+	 
+	 setA = setB.copy()
+	 
+	 or
+	 setA = set(setB)
+	 
+- frozen set
+	immutable set
+	setA = frozenset([1,2,3,4])
