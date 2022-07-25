@@ -78,3 +78,68 @@ mylist = list()
 	newlist = [i*i for i in mylist]
 	
 	syntax: [expression + for in loop]
+
+
+Tuple
+==========
+- ordered, immutable collection of datatypes
+- similar to list, but elements can not be changed after creation
+- normally used for objects that grouped togethor
+
+mytuple = ()
+mytuple = tuple()
+
+mytuple = (1,2,"new")
+- paranthesis are opztional
+- if you are creating a tuple with only one element "," is mandatory
+	mytuple = ("blue") : this is not a tuple, but string
+	mytuple = ("blue",) : this is a tuple with one element
+	
+- create a tuple from list
+	mytuple = tuple([1,2,"blue"])
+	
+- index accessible
+	mytuple[3]
+	
+- iteratable using for in loop
+	for i in mytuple:
+	
+- element inside a tuple:
+	if 'blue' in mytuple:
+	
+- length method
+	len(mytuple)
+	
+- count method
+	mytuple.count("`black")
+	
+- find index method
+	mytuple.index("brown")
+	returns first index of the element
+	if element is not present, value error
+	
+- convert tuple to list
+	mylist = list(mytuple)
+	
+- convert list to tuple
+	mytuple = tuple(mylist)
+	
+- slicing a tuple
+	newtuple = mytuple[2:8]
+	all rules are same as list slicing
+	
+- unpacking a tuple
+	mytuple = ("John", 18, "USA")
+	name, age, country = mytuple
+	number of elements should match
+	
+- unpacking multiple elements
+	i1, *iall, ilast = mytuple
+	here * takes all the other items and make it as list
+	
+- tuple is immutable, so python can make some optimisation.
+so it is efficent when working with large amount of data
+
+- for the same elements, tuple use less memory to store than list
+- tuple creation is also faster than list
+- tuple operations are effient than list
