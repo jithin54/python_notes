@@ -143,3 +143,71 @@ so it is efficent when working with large amount of data
 - for the same elements, tuple use less memory to store than list
 - tuple creation is also faster than list
 - tuple operations are effient than list
+
+Dict
+============
+- unordered, mutable, key-value pair
+- dict keys can be any immutable item like string, numbers, tuple
+
+- empty list
+	mydict = dict()
+
+- intialisation
+	mydict = {"name": "John", "age" = 18}
+	
+	mydict = dict(name = "John", age=27)
+	no need to use " for keys
+	
+- access values
+	mydict["name"]
+	a key error is possible if key is not present
+
+- adding keys
+	mydict["country"] = "USA"
+	
+- delete items
+	del mydict["name"]
+	
+	or 
+	mydict.pop("name")
+	
+	or
+	mydict.popitem() : removes the last added item
+	
+- check a key is present in a dict (2 ways)
+	if "name" in mydict:
+	
+	or use a try-except logic
+	
+- loop through dict (several ways)
+	for key in mydict:
+	loop through keys
+	
+	for key in mydict.keys():
+	loop through the keys (same as above)
+	
+	for val in mydict.values():
+	loop through the values
+	
+	for key,val in mydict.items:
+	loop through key-value pair
+	
+- copying a dict
+	newdict = mydict
+	newdict is same as original (same object)
+	
+	newdict = mydict.copy()
+	
+	or
+	newdict = dict(mydict)
+	
+- merge two dicts (update method)
+	mydict.update(newdict)
+	overwrites the already existing key-value pairs
+	also adds the new key-value that are not alread existing
+	
+- tuple as key
+	mydict = P{("first","last") : "John Smith", "age":19}
+	list is mutable, so can not be used as a key
+	
+
