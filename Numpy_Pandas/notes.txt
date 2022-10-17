@@ -1,1 +1,63 @@
+Numpy
+-------
+Numpy library provides specialised datastructure and functions and other tools for numerical computing in Python
+
+for example, if you want to do elementwise multiplication (dot product) we need to write functions to do that in python
+in numpy, we have built in functions to do the elementwise multiplication
+
+also numpy libraries are already precombiled in c++ language, so that Python interpreter has no thing do but call the function
+Due to this numpy functions are 100 times faster than equivalnet implementation in Python
+
+arrays
+------
+
+values = np.array([1,2,3,4])
+
+multi-dimention array
+
+values - np.array([1,2],[2,3])
+
+numpy array can use any dimentional array
+
+values.shape gives the length of array in each dimension
+
+all element will be of same datatypes
+
+values.dtype - shows the datatypes
+numpy will convert all datatypes into same if possible, otherwise throws error
+# numpy has its own datatypes like float64 etc
+
+np.matmul(matrix1, matrix2) : does the matrix multiplication
+
+
+np.array indexing
+-----------------
+
+array indexing is same as Python
+we can have multidimensional array indexing
+
+1D: values[3]
+2D: values[2,3]
+3D: values[1,2,1]
+
+slicing techinques also work same as Python, here you can have multiple dimension
+
+values[:2, 3:5]	(excluding 3 and 5 : same rule as Python)
+ 
+
+
+np.arange
+------------
+its similar to range function in Python
+
+np.arange(10) : produces 0 to 9
+np.arange(1,20) : produces array from 1 to 19
+np.arange(2,20,3) : produces array from 2 to 17 insteps of 3
+
+np.linspace
+------------
+produces array with desired numer of elements between start and stop points
+
+np.linspace(0,10,100) : creates array of 100 equidisanced points between 0 and 10 (including stop value)
+
 
