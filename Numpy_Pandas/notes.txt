@@ -13,6 +13,8 @@ arrays
 
 values = np.array([1,2,3,4])
 
+np.array can work with all datatypes int, float string, bool
+
 multi-dimention array
 
 values - np.array([1,2],[2,3])
@@ -59,5 +61,4 @@ np.linspace
 produces array with desired numer of elements between start and stop points
 
 np.linspace(0,10,100) : creates array of 100 equidisanced points between 0 and 10 (including stop value)
-
 
