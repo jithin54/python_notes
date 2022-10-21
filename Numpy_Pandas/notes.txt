@@ -6,7 +6,43 @@ for example, if you want to do elementwise multiplication (dot product) we need 
 in numpy, we have built in functions to do the elementwise multiplication
 
 also numpy libraries are already precombiled in c++ language, so that Python interpreter has no thing do but call the function
-Due to this numpy functions are 100 times faster than equivalnet implementation in Python
+Due to this numpy functions are 50 times faster than equivalnet implementation in Python
+
+
+
+Python list vs Numpy array
+-------------------
+python list can have mutiple datatypes, but this comes with a cost.
+each elelemnt in the list will be stored in mutiple, not conitnuous memory location and poniter to each memory location will be stored in list object.
+
+Where are np array only accepts same datatype (if different datatypes are given, np array does the datatype promotion make it as common datatype like float od something (if possible, otherwise error)
+
+Python also give array types instead of list which stores same datatype in a continuous memory segments
+
+What makes numpy popular is the operation that we perform on its arrays
+Np array also provide multidimentional array handling
+
+Np array attributes
+------------------
+
+ndim - dimension
+shape - length in each dimension
+size - total ellemnt x*y*z
+
+Array indexing
+-------------------
+
+similar to list indexing
+
+for single dim
+use index
+arr[0]	- 0th value 
+
+for mutidim: use tuple with location
+arr[0] - 0th row
+arr[(2,1)] - 2nd row 1st column
+
+
 
 arrays
 ------
@@ -61,4 +97,23 @@ np.linspace
 produces array with desired numer of elements between start and stop points
 
 np.linspace(0,10,100) : creates array of 100 equidisanced points between 0 and 10 (including stop value)
+
+rp.reshape
+----------
+its used to convert the dimension
+
+ex: if you have a matrix of dimension 3*6, you can convert it to 18*1,1*18, 6*3, 1*2*9 etc
+as long as the total number of positions are same
+
+arithamatic operations
+-----------------------
++ - / * : works as bitwise opereration
+
+also multiplication/division by a scalar
+
+broadcasting
+-------------
+when you add 5x2 to 1x2, it will replicate 1x2 to 5 times to match no of rows and add it to row-wise
+
+
 
