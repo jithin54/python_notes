@@ -38,10 +38,117 @@ for single dim
 use index
 arr[0]	- 0th value 
 
-for mutidim: use tuple with location
-arr[0] - 0th row
-arr[(2,1)] - 2nd row 1st column
+for mutidim:
+arr[2,1] - 2nd row 1st column
+using tuple with location 
+arr[(2,1)]
 
+-ve indexing also works as in the case of lists
+arr[(-1,-2)]
+
+
+Array slicing or acessing sub arrays
+------------------------------------
+similar to python slicing
+
+arr[start:stop:step]
+
+default values
+arr[start-0:stop=size, step=1]
+
+1D array
+arr[1:4] - values from 1st index to 3rd index
+arr[:5] - first five elements
+arr[5:] - elements from fifth elelmnts onwards
+
+arr[::2] - every other elelemnt
+arr[1::2] - every other element starting from 1)
+arr[::-1] - complete element in reverse order
+arr[5::-2] - starting from 5 reverse every other elelemnt
+
+MultiDim array
+arr[:2, 1:] - rows 0 and 1, all column except 0
+arr[:,::2] all rows and every other column
+arr[::-1,::-1] - reverse rows and columns
+
+Accessing one row or column
+-------------------------
+arr[0,:] - 0th row
+arr[:,1] = first column
+
+*Slicing python list is performed on copies, where as Np array actually modify original array itself
+
+if copy is needed, arr[2,:2].copy()
+
+Reshaping of arrays
+--------------------
+arr.reshape((3,4)) - with a tuple input
+provided reshaped array fits the number of elements exactly
+size 12 ndarry can be reshaped into 12x1, 1x12, 1x2x6, 3x4 etc
+
+instead  of reshape, nexaxis can also be used
+arr[np.newaxis, :]
+
+Concatenating arrays
+------------------------
+1D array
+np.concatenate([x1,x2,x3]) - merge all arrays in to one
+
+Multidim
+np.concatenate([x1,x2,x3], axis=0) - concatenate along vertical axis(arrays will be added at the bottom)
+axis =1 - array will be added to the right
+
+when working with arrays with mixed dimension
+use np.hstack and np.vstack (horizontal and verical)
+
+also for third axis, use np.dstack
+
+Splitting of arrays
+-----------------------
+np.slit
+np.vsplit
+np.hsplit
+
+also np.dsplit
+
+np.split(x, [1,2]) - 3 arrays row1 row 2 and rest
+
+x1, x2, x3 = np.split(x, [3,5])
+Note that array is split by N times you get N+1 sub arrays
+
+Array operations
+----------------
+elementwise operations
++,-,/,*,%,**, //(floor_divide
+
+you can also use np.add(x1,x2), np.substract(x1,2) etc
+
+absolute value
+---------------
+np.abs(x) : shows absolute value of all elements
+
+trignometric functions
+----------------
+theta = np.linspace(0, np.pi, 100)
+
+np.sin(theta)
+np.cos(theta)
+np.tan(theta)
+
+inverse
+np.arcsin(x)
+np.arccos(x)
+np.arctan(x)
+
+exponenets and logs
+-----------------
+np.exp(x) - e^x
+np.exp2(x) - 2^x
+np.power(3,x) - 3^x
+
+np.log(x)
+np.log2(x)
+np.log10(x)
 
 
 arrays
@@ -70,6 +177,7 @@ np.matmul(matrix1, matrix2) : does the matrix multiplication
 
 np.array indexing
 -----------------
+
 
 array indexing is same as Python
 we can have multidimensional array indexing
