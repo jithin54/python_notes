@@ -150,6 +150,34 @@ np.log(x)
 np.log2(x)
 np.log10(x)
 
+special cases where we need high precision
+np.expm1(x)
+np.log1p(x)
+
+Min and Max and Everyting else
+----------------------------
+Sum
+----
+
+x = 100*np.random.random((3,5))
+x.sum() : sums all the element
+
+x.sum(axis=0) : sums vertically gives 5 sums in an array since we have 5 columns
+x.sum(axis=1) : gives 3 sums for each rows
+
+Min and Max
+----------
+same syntax as sum
+x.Min(axis=0)
+x.Max(axis=1)
+
+Others
+-------
+x.std() : standard deviation
+x.mean()
+x.var()
+x.meadian()
+
 
 arrays
 ------
